@@ -2,6 +2,7 @@ FROM vikingu/base
 MAINTAINER Vikingu
 ENV ZOOKEEPER_VERSION 3.4.13
 
+RUN apt-get update; apt-get install -y gpg
 RUN wget -q http://mirror.vorboss.net/apache/zookeeper/zookeeper-${ZOOKEEPER_VERSION}/zookeeper-${ZOOKEEPER_VERSION}.tar.gz && \
 wget -q https://www.apache.org/dist/zookeeper/KEYS && \
 wget -q https://www.apache.org/dist/zookeeper/zookeeper-${ZOOKEEPER_VERSION}/zookeeper-${ZOOKEEPER_VERSION}.tar.gz.asc && \
