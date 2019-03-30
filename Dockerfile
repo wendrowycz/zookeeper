@@ -7,7 +7,7 @@ wget -q https://www.apache.org/dist/zookeeper/KEYS && \
 wget -q https://www.apache.org/dist/zookeeper/zookeeper-${ZOOKEEPER_VERSION}/zookeeper-${ZOOKEEPER_VERSION}.tar.gz.asc && \
 wget -q https://www.apache.org/dist/zookeeper/zookeeper-${ZOOKEEPER_VERSION}/zookeeper-${ZOOKEEPER_VERSION}.tar.gz.md5
 
-RUN md5sum -c ookeeper-${ZOOKEEPER_VERSION}.tar.gz.md5 && \
+RUN md5sum -c zookeeper-${ZOOKEEPER_VERSION}.tar.gz.md5 && \
 gpg --import KEYS && \
 gpg --verify zookeeper-${ZOOKEEPER_VERSION}.tar.gz.asc
 
